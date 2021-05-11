@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="static/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+                <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">DASHBOARD</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            
+           
+        </ul>
+        <!-- End of Sidebar -->
+
+
+
+                <!-- Begin Page Content -->
+    <div class="container-fluid">
+                    
+        <div class="row">
+
+            <div class="row">
+              <div class="col-md-12 grid-margin mt-3">
+                <div class="card">
+                  <div class="card-body" style="width: 65rem;">
+                    <div class="row">
+                      <div class="col-lg-12 col-md-4">
+                        <div class="d-flex">
+                          <div class="wrapper">
+                            <h1 class="mb-0 font-weight-semibold text-primary">{{pred}}</h1>
+                            <!--<h5 class="mb-0 font-weight-medium text-primary">____%</h5>-->
+                            <!--<p class="mb-0 text-muted">+14.00(+0.50%)</p>-->
+                          </div>
+
+                          <div class="wrapper my-auto ml-auto ml-lg-4">
+                            <h1 class="mb-0 font-weight-semibold" id="per_name"></h1> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+             <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-12 grid-margin mt-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="mb-0 font-weight-semibold"><b>Personality Traits</b></h3>
+                          <div class="d-flex mt-3 py-2 border-bottom">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait1">{{traits.split(", ")[0]}}</h5>
+                            </div>
+                          </div>
+                          <div class="d-flex py-2 border-bottom">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait2">{{traits.split(", ")[1]}}</h5>
+                            </div>
+                          </div>
+                          <div class="d-flex py-2 border-bottom">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait3">{{traits.split(", ")[2]}}</h5>
+                            </div>
+                          </div>
+                          <div class="d-flex pt-2">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait4">{{traits.split(", ")[3]}}</h5>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-12 grid-margin mt-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="mb-0 font-weight-semibold"><b>Careers</b></h3>
+                            <div class="d-flex mt-3 py-2 border-bottom">
+                        
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career1">{{careers.split(", ")[0]}}</h5>
+                              </div>
+                            </div>
+                            <div class="d-flex py-2 border-bottom">
+                              
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career2">{{careers.split(", ")[1]}}</h5>
+                              </div>
+                            </div>
+                            <div class="d-flex py-2 border-bottom">
+                              
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career3">{{careers.split(", ")[2]}}</h5>
+                              </div>
+                            </div>
+                            <div class="d-flex pt-2">
+                              
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career4">{{careers.split(", ")[3]}}</h5>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+
+
+
+
+
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-12 grid-margin stretch-card mt-3">
+                    <div class="card">
+                      <div class="card-body d-flex flex-column">
+                        <div class="wrapper">
+                          <h3 class="mb-0 font-weight-semibold"><b>Eminent Personalities</b></h3>
+                          <div class="mb-4" id="net-profit-legend"></div>
+                        </div>
+                        <div class="d-flex mt-3 py-2 border-bottom">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait1">{{personalities.split(", ")[0]}}</h5>
+                            </div>
+                          </div>
+                          <div class="d-flex py-2 border-bottom">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait2">{{personalities.split(", ")[1]}}</h5>
+                            </div>
+                          </div>
+                          <div class="d-flex py-2 border-bottom">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait3">{{personalities.split(", ")[2]}}</h5>
+                            </div>
+                          </div>
+                          <div class="d-flex pt-2">
+                            <div class="wrapper ml-2">
+                              <h5 class="mb-n1 font-weight-semibold" id="trait4">{{personalities.split(", ")[3]}}</h5>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                   <div class="col-md-10  mt-3">
+                    <div class="card mt-3">
+                      <div class="card-body">
+                        <h3 class="mb-0 font-weight-semibold"><b>Personality</b></h3>
+                            <div class="d-flex mt-3 py-2 border-bottom">
+                        
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career1">{{pers[0]}}</h5>
+                              </div>
+                            </div>
+                            <div class="d-flex py-2 border-bottom">
+                              
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career2">{{pers[1]}}</h5>
+                              </div>
+                            </div>
+                            <div class="d-flex py-2 border-bottom">
+                              
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career3">{{pers[2]}}</h5>
+                              </div>
+                            </div>
+                            <div class="d-flex pt-2">
+                              
+                              <div class="wrapper ml-2">
+                                <h5 class="mb-n1 font-weight-semibold" id ="career4">{{pers[3]}}</h5>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+                 
+
+
+
+
+
+
+
+
+
+   
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                       
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
